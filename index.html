@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotcha!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page Overlay -->
+    <div id="landing-page" class="landing-overlay">
+        <div class="landing-content">
+            <div class="landing-header">
+                <h1>🔍 Gotcha!</h1>
+                <h2>Forensic Investigation Game</h2>
+            </div>
+            <div class="landing-body">
+                <p class="landing-intro">
+                    Welcome to <strong>Gotcha!</strong> - an interactive forensic investigation experience where you'll step into the shoes of a detective solving a complex case.
+                </p>
+                <div class="landing-features">
+                    <div class="feature">
+                        <span class="feature-icon">👥</span>
+                        <p>Interview key witnesses and suspects</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">📋</span>
+                        <p>Examine the incident report carefully</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🧩</span>
+                        <p>Piece together clues to solve the mystery</p>
+                    </div>
+                </div>
+                <p class="landing-instruction">
+                    Your investigation begins with reviewing the incident report. Click "Start Investigation" to begin your journey into this compelling case.
+                </p>
+            </div>
+            <div class="landing-footer">
+                <button id="start-investigation" class="start-button">
+                    🚀 Start Investigation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incident Report Button -->
+    <button id="incident-report-btn" class="incident-report-button" title="View Incident Report">
+        📄 Incident Report
+    </button>
+
+    <div class="container">
+        <header>
+            <h1>Gotcha!</h1>
+        </header>
+
+        <div class="character-selection">
+            <label for="character-select">Choose who you'd like to talk to:</label>
+            <select id="character-select">
+                <option value="">Select a character to chat with...</option>
+                <option value="Steve Hooks (Detective Partner)">Steve Hooks (Detective Partner)</option>
+            </select>
+        </div>
+
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3 id="chat-title">Chat with Dr. Alex Morgan</h3>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" id="message-input" placeholder="Type your message here..." />
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+            
+            <div class="progress-sidebar">
+                <div class="progress-header">
+                    <h3>🔍 Phase 1 Investigation</h3>
+                </div>
+                <div class="progress-content">
+                    <div class="progress-section">
+                        <h4>Key Evidence</h4>
+                        <ul class="progress-list">
+                            <li class="progress-item" data-keyword="bullet holes">
+                                <span class="checkbox">☐</span>
+                                <span class="text">The gun that was used to kill the victim</span>
+                                <span class="placeholder">???</span>
+                            </li>
+                            <li class="progress-item" data-keyword="bite marks">
+                                <span class="checkbox">☐</span>
+                                <span class="text">The bite marks on the victim's body</span>
+                                <span class="placeholder">???</span>
+                            </li>
+                            <li class="progress-item" data-keyword="harassment">
+                                <span class="checkbox">☐</span>
+                                <span class="text">Stephanie Lazarus's harassment of the victim</span>
+                                <span class="placeholder">???</span>
+                            </li>
+                            <li class="progress-item" data-keyword="lost car">
+                                <span class="checkbox">☐</span>
+                                <span class="text">What happened to the victim's car</span>
+                                <span class="placeholder">???</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Incident Report Modal -->
+    <div id="incident-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Incident Report</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="slider-container">
+                    <div class="slide active" data-slide="1">
+                        <div class="slide-content">
+                            <p>Today is February 26th, 1986. You are in Los Angeles, California, USA.</p><br>
+                            <p>You are <strong>Detective Lyle Mayer</strong>, who is leading the investigation into Sherri Rasmussen's murder.</p><br>
+                            <p>Your partner, <strong>Detective Steve Hooks</strong>, is a senior LAPD detective assisting on the case.</p><br>
+                            <p>Together, you will review the events surrounding that day and re-examine the evidence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-slide="2">
+                        <div class="slide-content">
+                            <p>At approximately 7:20 a.m., <strong>John Ruetten</strong> departed the couple's condominium for work. His wife, <strong>Sherri Rasmussen</strong>, had planned to deliver a presentation at Glendale Adventist Medical Center but mentioned she might stay home due to a back injury.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-slide="3">
+                        <div class="slide-content">
+                            <p>By 9:45 a.m., a neighbor noticed the Ruettens' garage door open with no vehicle inside. Around 10:00 a.m., Ruetten made several unanswered calls home, concerned that the answering machine was inactive. Rasmussen's sister also attempted to reach her and left a message once the machine began operating again.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-slide="4">
+                        <div class="slide-content">
+                            <p>Around noon, two gardeners found and returned Rasmussen's purse. At roughly 12:30 p.m., a nearby housekeeper reported hearing sounds of a struggle followed by a heavy thud.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-slide="5">
+                        <div class="slide-content">
+                            <p>That evening, Ruetten returned home to find broken glass in the driveway and Rasmussen’s BMW 318i missing. Inside, the condominium showed signs of a violent struggle—overturned furniture, shattered glass, and blood near the alarm’s panic button. Evidence indicated the victim had been restrained, and a quilted blanket with a hole and burn marks was also found at the scene.</p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="slider-controls">
+                    <button id="prev-slide" class="slider-btn">← Previous</button>
+                    <div class="slide-indicators">
+                        <span class="indicator active" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                        <span class="indicator" data-slide="4"></span>
+                        <span class="indicator" data-slide="5"></span>
+                    </div>
+                    <button id="next-slide" class="slider-btn">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
